@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:3.1 as build-env
 WORKDIR /src
-COPY */*.csproj .
+COPY  myWebApp.csproj .
 RUN dotnet restore
 COPY . .
 RUN dotnet publish -c Release -o /publish
