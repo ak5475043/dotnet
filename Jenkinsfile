@@ -33,7 +33,7 @@ pipeline {
         stage('Docker-build') {
             steps {
                 // Publish the application
-                sh 'docker build -t docker-dotnet:1.0 .'
+                sh 'sudo docker build -t docker-dotnet:1.0 .'
             }
         }
     }
