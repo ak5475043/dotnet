@@ -29,5 +29,12 @@ pipeline {
                 sh 'dotnet publish -c Release -o ./publish'
             }
         }
+        
+        stage('Docker-build') {
+            steps {
+                // Publish the application
+                sh 'docker build -t docker-dotnet:1.0'
+            }
+        }
     }
 }
